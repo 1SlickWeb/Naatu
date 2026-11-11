@@ -1,0 +1,45 @@
+/* ============================================================
+   Naatu Naatu — tokens
+   Taken from the restaurant's printed menu: cream paper, black
+   condensed item names, rust section titles, a wavy dotted border.
+   ============================================================ */
+:root {
+  /* Paper */
+  --paper:    #F5EDDF;
+  --paper-2:  #EDE1CB;   /* banded sections */
+  --paper-3:  #E3D3B6;
+
+  /* Ink */
+  --ink:      #231912;
+  --ink-2:    #4A3A2E;
+  --muted:    #75604F;   /* 4.7:1 on --paper */
+
+  /* Menu colours */
+  --rust:        #A9461F;   /* text-safe: 5.3:1 on --paper, 6.2:1 under white */
+  --rust-bright: #C0502B;   /* decorative only */
+  --saffron:     #E9A51C;
+  --leaf:        #4C7A33;
+
+  --rule:        rgba(35, 25, 18, .16);
+  --rule-strong: rgba(35, 25, 18, .38);
+
+  /* Type */
+  --f-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --f-serif:   'Bitter', Georgia, serif;
+  --f-sans:    'Barlow', -apple-system, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --wrap: 1180px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --nav-h: 78px;
+
+  /* Motion */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --t: 220ms;
+
+  /* Ornaments (inline SVG so they stay crisp and need no requests) */
+  --wave: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'><path d='M0 7c3.5-5 10.5-5 14 0s10.5 5 14 0' fill='none' stroke='%23B4532A' stroke-width='1.3'/><circle cx='7' cy='11.6' r='1.35' fill='%23B4532A'/><circle cx='21' cy='2.4' r='1.35' fill='%23B4532A'/></svg>");
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .22  0 0 0 0 .12  0 0 0 .075 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+@media (max-width: 760px) { :root { --nav-h: 64px; } }
